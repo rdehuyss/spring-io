@@ -1,0 +1,13 @@
+package org.jobrunr.springio;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringIOApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringIOApplication.class, args);
+	}
+
+}
