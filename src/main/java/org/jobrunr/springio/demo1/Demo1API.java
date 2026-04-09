@@ -26,13 +26,13 @@ public class Demo1API {
 
     @GetMapping("/enqueue-via-lambda")
     public String createJobViaLambda(@RequestParam(required = false, defaultValue = "chess") String tableGame, @RequestParam(required = false, defaultValue = "Estrella") String beerType) {
-        jobScheduler.enqueue(() -> christopherColumbusService.playSomeTableGamesAndDrinkSomeBeer(tableGame, beerType));
+        // use the JobScheduler to make sure Christoper Columbus relaxes
         return "ok";
     }
 
     @GetMapping("/enqueue-via-jobrequest")
     public String createJobViaJobRequest(@RequestParam(required = false, defaultValue = "chess") String tableGame, @RequestParam(required = false, defaultValue = "Estrella") String beerType) {
-        jobRequestScheduler.enqueue(new ChristopherColumbusRelaxRequest(tableGame, beerType));
+        // use the JobRequestScheduler to make sure Christoper Columbus relaxes
         return "ok";
     }
 
