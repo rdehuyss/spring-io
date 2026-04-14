@@ -16,6 +16,7 @@ public class ChristopherColumbusService {
     }
 
     public void doFishing(String fishType, String naturalDisaster) {
+        System.out.println("Putting some bait on my hook...");
         System.out.println("Doing some fishing and hope to catch some " + fishType);
         if (isNotNullOrEmpty(naturalDisaster)) {
             throw new NaturalDisasterException(naturalDisaster);
